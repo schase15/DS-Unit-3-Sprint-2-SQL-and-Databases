@@ -1,4 +1,4 @@
-# Assignment part 1
+# Module 1 Assignment part 1
 
 # Imports
 import sqlite3

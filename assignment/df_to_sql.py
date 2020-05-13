@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Read in CSV
-df = pd.read_csv('buddymove_holidayiq.csv')
+df = pd.read_csv('module1-introduction-to-sql/buddymove_holidayiq.csv')
 
 # Make sure it was done properly
 df.shape
