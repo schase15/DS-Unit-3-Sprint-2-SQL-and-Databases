@@ -69,8 +69,6 @@ psycopg2.extensions.register_adapter(np.int64, psycopg2._psycopg.AsIs)
 # Convert dataframe to tuples
 list_of_tuples = list(df.to_records(index=True))
 
-breakpoint()
-
 # Create insertion query and execute
 insertion_query = "INSERT INTO passengers (id, survived, pclass, name, gender, age, sib_spouse_count, parent_child_count, fare) VALUES %s"
 execute_values(cursor, insertion_query, list_of_tuples)

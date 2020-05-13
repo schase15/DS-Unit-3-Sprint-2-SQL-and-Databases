@@ -75,6 +75,7 @@ insertion_query = f"INSERT INTO armory_items (item_id, name, value, weight) VALU
 # Turn df into dictionary
 records = armory_items.to_dict("records")
 
+
 # Turn dictionary into list of tuples
 # Iterate through rows, grabbing one item from each key name (old column headers) in dictionary
 list_of_tuples = [(r['item_id'], r['name'], r['value'], r['weight']) for r in records]

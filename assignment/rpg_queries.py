@@ -156,7 +156,7 @@ query = 'SELECT AVG(weapon_count) as avg_weapon, AVG(item_count) as avg_item FRO
 
 # Results
 result = cursor.execute(query).fetchall()
-
+breakpoint()
 # Print results
 print("---------")
 print('Average item count')

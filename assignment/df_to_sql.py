@@ -4,6 +4,12 @@ import pandas as pd
 # Read in CSV
 df = pd.read_csv('module1-introduction-to-sql/buddymove_holidayiq.csv')
 
+# #Better way to read in dataframe
+# CSV_path = os.path.join(os.path.dirname(__file__), "..", "module1-introduction-to-sql", "buddymove_holidayiq.csv")
+# df = pandas.read_csv(CSV_path)
+# # to start index at 1 (resembling primary key behavior)
+# df.index += 1
+
 # Make sure it was done properly
 df.shape
 
