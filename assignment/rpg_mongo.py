@@ -64,14 +64,21 @@ collection.insert_many(records)
 # Count the number of documents (rows) - should be 174
 print('DOCS:', collection.count_documents({}))
 
-#### WRITTEN QUESTIONS ####
+#### WRITTEN QUESTION ####
 
 '''
 I found working with MongoDB to be very similar to working with PostgreSQL. Things might be
 named differently and queries are asked in different ways but a lot of the concepts are the same.
-I like that PostgreSQL is a little more rigid and structured. It helps prevent errors from not
-being careful when inputing values. It is also easier to create queries because you are using intuitive
-words like Select, where, is in etc... However, I found MongoDB a little easier when writing in python.
-The syntax of the queries makes more sense than writting out a string. I also felt more comfortable
-manipulating the results of a query because it was stored in a list instead of an object.
+I like that PostgreSQL is more rigid and structured. It helps prevent errors from not
+being careful when inputing values. It doesn't allow duplicate entries and makes sure schema is enforced.
+It is also easier to create queries because you are using intuitive words like Select, where, is in etc...
+However, it requires learning SQL which is a seperate skill.
+
+I found MongoDB a little easier because it is using python. The syntax of the queries makes more sense 
+than writting out a SQL, even though SQL is easier to interpret. I also felt more comfortable
+manipulating the results of a query because it was stored in a list instead of an object. It is looser so 
+seems quicker to get working. Mongo seems quicker to implement but feels like less of a polished product. 
+
+You might choose one or the other based on the team skills, what previous db's you are using. It is much easier
+to stick with the same database type instead of converting between the two.
 '''

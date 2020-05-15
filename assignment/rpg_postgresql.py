@@ -92,3 +92,5 @@ execute_values(cursor, insertion_query, list_of_tuples)
 connection.commit()
 cursor.close()
 connection.close()
+
+

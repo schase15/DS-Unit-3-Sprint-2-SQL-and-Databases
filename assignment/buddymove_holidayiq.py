@@ -13,6 +13,8 @@ connection = sqlite3.connect(DATABASE_FILEPATH)
 # Use row factory so that we can call columns by name instead of index
 connection.row_factory = sqlite3.Row
 print(type(connection))
+
+# Create cursor
 cursor = connection.cursor()
 print(type(cursor))
 

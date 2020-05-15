@@ -29,7 +29,7 @@ cursor = connection.cursor()
 print(type(cursor))
 
 
-## CREATE TABLE - set up
+# CREATE TABLE - set up
 
 # Pass in the name of the table
 # Pass in the column headers and the types of data they need to be
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS passengers (
 );
 """
 
-# Create table
+# Execute create table
 cursor.execute(table_creation_query)
 
 
@@ -64,6 +64,13 @@ print(df.head())
 # could alternatively change the datatypes of our dataframe,
 # ... or do transformations on our list of tuples later (after reading from the dataframe, before inserting into the table)
 psycopg2.extensions.register_adapter(np.int64, psycopg2._psycopg.AsIs)
+
+
+# ### Another method to avoid the numpy error
+#  # do this before converting to native types, because this actually converts to np.bool
+# df["Survived"] = df["Survived"].values.astype(bool)
+# # converts numpy dtypes to native python dtypes (avoids psycopg2.ProgrammingError: can't adapt type 'numpy.int64')
+# df = df.astype("object")
 
 
 # Convert dataframe to tuples
